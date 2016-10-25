@@ -74,7 +74,7 @@ controller.hears(['conversation'], 'message_received', function(bot, message) {
 
 // User says anything else
 controller.hears('^(?!postback).*$', 'message_received', function(bot, message) {
-    bot.reply(message, 'I am not able to handle your message, ' + message.text);
+    bot.reply(message, 'I am not able to handle your message, ' + message.text + '\nTry saying "hello", "hi", "hey", or "button", or "image", or "comic"!');
 });
 
 // Facebook webhook handler
